@@ -858,25 +858,24 @@ local animationIdsToStop = {
  
     [10469643643] = true,
  
-    ["11365563255"] = true,
-
 }
  
  
 local replacementAnimations = {
-  
-   ["17859015788"] = "rbxassetid://12684185971",
-
+ 
+    ["17859015788"] = "rbxassetid://12684185971",
+ 
+    ["10469643643"] = "rbxassetid://17889290569",
+ 
     ["10469639222"] = "rbxassetid://17889471098",
  
     ["10469630950"] = "rbxassetid://17889461810",
  
     ["10469493270"] = "rbxassetid://17889458563",
  
-    ["11365563255"] = "rbxassetid://16552234590" 
+    ["11365563255"] = "rbxassetid://15121659862" 
  
 }
- 
  
 local queue = {}
  
