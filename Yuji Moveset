@@ -152,6 +152,14 @@ Anim.TimePosition = startTime
  
 Anim:AdjustSpeed(0.9)
  
+message = "BLACK"
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
+
+wait(0.5)
+
+message = "FLASH!!!"
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
+
 wait(0.9)
 
  local final1 = game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].FinalImpact.Attachment:Clone()
@@ -244,11 +252,11 @@ local startTime = 0
  
 Anim:Play()
  
-Anim:AdjustSpeed(1)
+Anim:AdjustSpeed(0.5)
  
 Anim.TimePosition = startTime
  
-Anim:AdjustSpeed(1)
+Anim:AdjustSpeed(2.3)
  
  
     end
@@ -288,7 +296,7 @@ end
  
 local AnimAnim = Instance.new("Animation")
  
-AnimAnim.AnimationId = "rbxassetid://14057231976"
+AnimAnim.AnimationId = "rbxassetid://10469493270"
  
 local Anim = Humanoid:LoadAnimation(AnimAnim)
  
@@ -302,8 +310,7 @@ Anim:AdjustSpeed(0)
 Anim.TimePosition = startTime
  
 Anim:AdjustSpeed(1.2)
- 
- 
+
 delay(1.8, function()
  
     Anim:Stop()
@@ -347,7 +354,7 @@ end
  
 local AnimAnim = Instance.new("Animation")
  
-AnimAnim.AnimationId = "rbxassetid://13294471966"
+AnimAnim.AnimationId = "rbxassetid://18181348446"
  
 local Anim = Humanoid:LoadAnimation(AnimAnim)
  
@@ -409,7 +416,11 @@ Anim:AdjustSpeed(0.3)
  
 Anim.TimePosition = startTime 
  
+message = "Domain Expansion: Malevolent Shrine"
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
  
+loadstring(game:HttpGet('https://pastebin.com/raw/6MLS9n2d'))()
+
     end
  
 end
@@ -511,7 +522,11 @@ Anim.TimePosition = startTime
  
 Anim:AdjustSpeed(0.3)
  
- 
+ message = "Fuga"
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
+
+loadstring(game:HttpGet('https://pastebin.com/raw/6MLS9n2d'))()
+
     end
  
 end
@@ -544,7 +559,9 @@ for _, animTrack in pairs(Humanoid:GetPlayingAnimationTracks()) do
  
 end
  
- 
+var = math.random(1,10)
+if var == 7 then
+
 local AnimAnim = Instance.new("Animation")
  
 AnimAnim.AnimationId = "rbxassetid://15507137974"
@@ -563,6 +580,36 @@ Anim.TimePosition = startTime
  
 Anim:AdjustSpeed(1)
  
+message = "I'll Show You What Real Jujutsu is."
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
+
+else
+
+ local AnimAnim = Instance.new("Animation")
+ 
+AnimAnim.AnimationId = "rbxassetid://17106858586"
+ 
+local Anim = Humanoid:LoadAnimation(AnimAnim)
+ 
+ message = "Your Such An Annoying Brat."
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
+
+local startTime = 0
+ 
+ 
+Anim:Play()
+ 
+Anim:AdjustSpeed(0)
+ 
+Anim.TimePosition = startTime
+ 
+Anim:AdjustSpeed(1)
+end
+
+wait(1)
+
+loadstring(game:HttpGet('https://pastebin.com/raw/Gn1s45aS'))()
+
     end
  
 end
@@ -673,7 +720,7 @@ Anim.TimePosition = startTime
  
 Anim:AdjustSpeed(0.6)
  
- 
+
     end
  
 end
@@ -760,7 +807,7 @@ end
  
 local AnimAnim = Instance.new("Animation")
  
-AnimAnim.AnimationId = "rbxassetid://15290930205"
+AnimAnim.AnimationId = "rbxassetid://15391323441"
  
 local Anim = Humanoid:LoadAnimation(AnimAnim)
  
@@ -773,9 +820,12 @@ Anim:AdjustSpeed(0)
  
 Anim.TimePosition = startTime
  
-Anim:AdjustSpeed(0.5)
- 
- 
+Anim:AdjustSpeed(1)
+
+loadstring(game:HttpGet('https://pastebin.com/raw/6MLS9n2d'))()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/tamarixr/tamhub/main/worldcuttingtable.lua"))()
+
     end
  
 end
@@ -836,148 +886,148 @@ end
  
 humanoid.AnimationPlayed:Connect(onAnimationPlayed)
  
- 
-local Players = game:GetService("Players")
- 
+ local Players = game:GetService("Players")
+
 local player = Players.LocalPlayer
- 
+
 local character = player.Character or player.CharacterAdded:Wait()
- 
+
 local humanoid = character:WaitForChild("Humanoid")
- 
- 
+
+
 local animationIdsToStop = {
- 
+
     [17859015788] = true,
- 
+
     [10469493270] = true,
- 
+
     [10469630950] = true,
- 
+
     [10469639222] = true,
- 
+
     [10469643643] = true,
- 
+
 }
- 
- 
+
+
 local replacementAnimations = {
- 
+
     ["17859015788"] = "rbxassetid://12684185971",
- 
+
     ["10469643643"] = "rbxassetid://17889290569",
- 
+
     ["10469639222"] = "rbxassetid://17889471098",
- 
+
     ["10469630950"] = "rbxassetid://17889461810",
- 
+
     ["10469493270"] = "rbxassetid://17889458563",
- 
-    ["11365563255"] = "rbxassetid://15121659862" 
- 
+
+    ["11365563255"] = "rbxassetid://14516273501"
+
 }
- 
+
+
 local queue = {}
- 
+
 local isAnimating = false
- 
- 
+
+
 local function playReplacementAnimation(animationId)
- 
+
     if isAnimating then
- 
+
         table.insert(queue, animationId)
- 
+
         return
- 
+
     end
- 
+
    
- 
+
     isAnimating = true
- 
+
     local replacementAnimationId = replacementAnimations[tostring(animationId)]
- 
+
     if replacementAnimationId then
- 
+
         local AnimAnim = Instance.new("Animation")
- 
+
         AnimAnim.AnimationId = replacementAnimationId
- 
+
         local Anim = humanoid:LoadAnimation(AnimAnim)
- 
+
         Anim:Play()
- 
+
        
- 
+
         Anim.Stopped:Connect(function()
- 
+
             isAnimating = false
- 
+
             if #queue > 0 then
- 
+
                 local nextAnimationId = table.remove(queue, 1)
- 
+
                 playReplacementAnimation(nextAnimationId)
- 
+
             end
- 
+
         end)
- 
+
     else
- 
+
         isAnimating = false
- 
+
     end
- 
+
 end
- 
- 
+
+
 local function stopSpecificAnimations()
- 
+
     for _, track in ipairs(humanoid:GetPlayingAnimationTracks()) do
- 
+
         local animationId = tonumber(track.Animation.AnimationId:match("%d+"))
- 
+
         if animationIdsToStop[animationId] then
- 
+
             track:Stop()
- 
+
         end
- 
+
     end
- 
+
 end
- 
- 
+
+
 local function onAnimationPlayed(animationTrack)
- 
+
     local animationId = tonumber(animationTrack.Animation.AnimationId:match("%d+"))
- 
+
     if animationIdsToStop[animationId] then
- 
+
         stopSpecificAnimations()
- 
+
         animationTrack:Stop()
- 
+
        
- 
+
         local replacementAnimationId = replacementAnimations[tostring(animationId)]
- 
+
         if replacementAnimationId then
- 
+
             playReplacementAnimation(animationId)
- 
+
         end
- 
+
     end
- 
+
 end
- 
- 
+
+
 humanoid.AnimationPlayed:Connect(onAnimationPlayed)
- 
- 
+
+
 local player = game.Players.LocalPlayer
  
 local character = player.Character or player.CharacterAdded:Wait()
