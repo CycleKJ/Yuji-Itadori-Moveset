@@ -151,16 +151,16 @@ Anim:AdjustSpeed(0.1)
 Anim.TimePosition = startTime
  
 Anim:AdjustSpeed(0.9)
- 
+
 message = "BLACK"
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
 
-wait(0.5)
+wait(0.3)
 
 message = "FLASH!!!"
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
 
-wait(0.9)
+wait(0.1)
 
  local final1 = game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].FinalImpact.Attachment:Clone()
 final1.Parent = game.Players.LocalPlayer.Character["Right Arm"]
