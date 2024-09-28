@@ -328,8 +328,8 @@ local function stopEffects()
     end
 end
 
--- Set a timer to stop the effects after 5 seconds
-wait(2)
+-- Set a timer to stop the effects after 1 seconds
+wait(1)
 stopEffects()
 
 end
@@ -337,7 +337,7 @@ end
  
 local AnimAnim = Instance.new("Animation")
  
-AnimAnim.AnimationId = "rbxassetid://15259161390"
+AnimAnim.AnimationId = "rbxassetid://10469493270"
  
 local Anim = Humanoid:LoadAnimation(AnimAnim)
  
