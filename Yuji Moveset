@@ -343,9 +343,9 @@ local function applyEffect(effectSource, parentPart, particleCount)
 end
 
 -- Apply all the effects to the character's parts
-applyEffect(game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmFX, game.Players.LocalPlayer.Character["Left Arm"], 1)
-applyEffect(game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmFX, game.Players.LocalPlayer.Character["Left Arm"], 1)
-applyEffect(game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmFX, game.Players.LocalPlayer.Character["Left Arm"], 1)
+applyEffect(game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmFX, game.Players.LocalPlayer.Character["Right Arm"], 1)
+applyEffect(game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmFX, game.Players.LocalPlayer.Character["Right Arm"], 1)
+applyEffect(game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmFX, game.Players.LocalPlayer.Character["Right Arm"], 1)
 
 -- Function to stop and clean up the effects
 local function stopEffects()
