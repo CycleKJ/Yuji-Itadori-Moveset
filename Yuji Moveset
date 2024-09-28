@@ -317,8 +317,6 @@ delay(1.8, function()
  
 end)
  
- 
-You sent
 -- Bright blue color sequence
 local brightBlue = ColorSequence.new{
     ColorSequenceKeypoint.new(0, Color3.fromRGB(0, 191, 255)),   -- Deep sky blue
