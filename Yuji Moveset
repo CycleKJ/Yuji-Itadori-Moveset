@@ -313,7 +313,7 @@ Anim:AdjustSpeed(1.6)
 
 delay(1.8, function()
  
-    Anim:Stop()
+    Anim:Stop(1.2)
  
 end)
  
