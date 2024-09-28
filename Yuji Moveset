@@ -1073,3 +1073,10 @@ player.CharacterAdded:Connect(function(newCharacter)
     end
  
 end)
+
+game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Thx for using🤑",
+    Text = "Made by Kenji And Pen",
+    Duration = 15,
+    Icon = "rbxassetid://7061201481"
+})
