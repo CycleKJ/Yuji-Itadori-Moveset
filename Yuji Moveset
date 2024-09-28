@@ -318,6 +318,47 @@ delay(1.8, function()
 end)
  
  
+You sent
+-- Bright blue color sequence
+local brightBlue = ColorSequence.new{
+    ColorSequenceKeypoint.new(0, Color3.fromRGB(0, 191, 255)),   -- Deep sky blue
+    ColorSequenceKeypoint.new(0.5, Color3.fromRGB(30, 144, 255)), -- Dodger blue
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(135, 206, 250))   -- Light sky blue
+}
+
+-- Create a table to store the effects so they can be destroyed later
+local effects = {}
+
+-- Function to apply effects to a part and store them for later destruction
+local function applyEffect(effectSource, parentPart, particleCount)
+    local fx = effectSource:Clone()
+    fx.Parent = parentPart
+    table.insert(effects, fx)  -- Store the cloned effect
+    for _, child in ipairs(fx:GetChildren()) do
+        if child:IsA("ParticleEmitter") then
+            child.Color = brightBlue -- Change particle color to bright blue
+            child:Emit(particleCount) -- Emit specified particles
+        end
+    end
+end
+
+-- Apply all the effects to the character's parts
+applyEffect(game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmFX, game.Players.LocalPlayer.Character["Left Arm"], 1)
+applyEffect(game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmFX, game.Players.LocalPlayer.Character["Left Arm"], 1)
+applyEffect(game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmFX, game.Players.LocalPlayer.Character["Left Arm"], 1)
+
+-- Function to stop and clean up the effects
+local function stopEffects()
+    for _, fx in ipairs(effects) do
+        if fx then
+            fx:Destroy()  -- Remove each effect
+        end
+    end
+end
+
+-- Set a timer to stop the effects after 5 seconds
+wait(5)
+stopEffects()
     end
  
 end
@@ -1073,10 +1114,3 @@ player.CharacterAdded:Connect(function(newCharacter)
     end
  
 end)
-
-game:GetService("StarterGui"):SetCore("SendNotification", {
-    Title = "Thx for using🤑",
-    Text = "Made by Kenji And Pen",
-    Duration = 15,
-    Icon = "rbxassetid://6541659501"
-})
