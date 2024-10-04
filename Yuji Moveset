@@ -564,6 +564,36 @@ Anim:AdjustSpeed(0.3)
  message = "Fuga"
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
 
+-- Grey color sequence for ArmFX
+local greyColor = ColorSequence.new{
+    ColorSequenceKeypoint.new(0, Color3.fromRGB(169, 169, 169)),   -- Dark grey
+    ColorSequenceKeypoint.new(0.5, Color3.fromRGB(192, 192, 192)), -- Silver
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(211, 211, 211))    -- Light grey
+}
+
+-- Yellow color sequence for ArmBurst (like bullet)
+local yellowColor = ColorSequence.new{
+    ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 255, 0)),     -- Bright yellow
+    ColorSequenceKeypoint.new(0.5, Color3.fromRGB(255, 223, 0)),   -- Gold yellow
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(255, 204, 0))      -- Dark yellow
+}
+
+-- Create a table to store the effects so they can be destroyed later
+local effects = {}
+
+-- Function to apply effects to a part and store them for later destruction
+local function applyEffect(effectSource, parentPart, particleCount, color)
+    local fx = effectSource:Clone()
+    fx.Parent = parentPart
+    table.insert(effects, fx)  -- Store the cloned effect
+    for _, child in ipairs(fx:GetChildren()) do
+        if child:IsA("ParticleEmitter") then
+            child.Color = color -- Change particle color based on input
+            child:Emit(particleCount) -- Emit specified particles
+        end
+    end
+end
+
 loadstring(game:HttpGet('https://pastebin.com/raw/6MLS9n2d'))()
 
     end
