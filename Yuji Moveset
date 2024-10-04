@@ -329,6 +329,8 @@ end
 
 -- Apply all the effects to the character's parts
 applyEffect(game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmFX, game.Players.LocalPlayer.Character["Right Arm"], 1)
+applyEffect(game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmFX, game.Players.LocalPlayer.Character["Right Arm"], 1)
+applyEffect(game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmFX, game.Players.LocalPlayer.Character["Right Arm"], 1)
 
 
 -- Function to stop and clean up the effects
@@ -983,7 +985,7 @@ local replacementAnimations = {
 
     ["17859015788"] = "rbxassetid://12684185971",
 
-    ["10469643643"] = "rbxassetid://16552234590",
+    ["10469643643"] = "rbxassetid://17889290569",
 
     ["10469639222"] = "rbxassetid://17888705432",
 
