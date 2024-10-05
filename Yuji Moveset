@@ -187,11 +187,13 @@ end
 
 -- Apply all the effects to the character's parts
 applyEffect(game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmEnabled, game.Players.LocalPlayer.Character["Right Arm"], 1)
-applyEffect(game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].ArmEnabled, game.Players.LocalPlayer.Character["Right Arm"], 1)
-applyEffect(game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].ArmEnabled, game.Players.LocalPlayer.Character["Right Arm"], 1)
-applyEffect(game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].ArmEnabled, game.Players.LocalPlayer.Character["Right Arm"], 1)
-applyEffect(game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].ArmEnabled, game.Players.LocalPlayer.Character["Torso"], 1)
-applyEffect(game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].ArmEnabled, game.Players.LocalPlayer.Character["Torso"], 1)
+applyEffect(game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmEnabled, game.Players.LocalPlayer.Character["Right Arm"], 1)
+applyEffect(game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmEnabled, game.Players.LocalPlayer.Character["Right Arm"], 1)
+applyEffect(game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].FinalImpact, game.Players.LocalPlayer.Character["Right Arm"], 1)
+applyEffect(game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].FinalImpact, game.Players.LocalPlayer.Character["Right Arm"], 1)
+applyEffect(game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].FinalImpact, game.Players.LocalPlayer.Character["Right Arm"], 1)
+applyEffect(game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].FinalImpact, game.Players.LocalPlayer.Character["Torso"], 1)
+applyEffect(game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].FinalImpact, game.Players.LocalPlayer.Character["Torso"], 1)
 
 -- Function to stop and clean up the effects
 local function stopEffects()
