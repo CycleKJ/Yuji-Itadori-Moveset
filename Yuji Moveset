@@ -162,51 +162,48 @@ game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageReque
 
 wait(0.1)
 
--- Bright blue color sequence
-local brightBlue = ColorSequence.new{
-    ColorSequenceKeypoint.new(0, Color3.fromRGB(0, 191, 255)),   -- Deep sky blue
-    ColorSequenceKeypoint.new(0.5, Color3.fromRGB(30, 144, 255)), -- Dodger blue
-    ColorSequenceKeypoint.new(1, Color3.fromRGB(135, 206, 250))   -- Light sky blue
-}
-
--- Create a table to store the effects so they can be destroyed later
-local effects = {}
-
--- Function to apply effects to a part and store them for later destruction
-local function applyEffect(effectSource, parentPart, particleCount)
-    local fx = effectSource:Clone()
-    fx.Parent = parentPart
-    table.insert(effects, fx)  -- Store the cloned effect
-    for _, child in ipairs(fx:GetChildren()) do
-        if child:IsA("ParticleEmitter") then
-            child.Color = brightBlue -- Change particle color to bright blue
-            child:Emit(particleCount) -- Emit specified particles
-        end
+local final1 = game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].FinalImpact.Attachment:Clone()
+final1.Parent = game.Players.LocalPlayer.Character["Right Arm"]
+for _, child in ipairs(final1:GetChildren()) do
+    if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
+        child:Emit(1) -- Emit 20 particles
     end
 end
-
--- Apply all the effects to the character's parts
-applyEffect(game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmEnabled, game.Players.LocalPlayer.Character["Right Arm"], 1)
-applyEffect(game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmEnabled, game.Players.LocalPlayer.Character["Right Arm"], 1)
-applyEffect(game.ReplicatedStorage.Resources.FiveSeasonsFX["CharFX"].ArmEnabled, game.Players.LocalPlayer.Character["Right Arm"], 1)
-applyEffect(game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].FinalImpact, game.Players.LocalPlayer.Character["Right Arm"], 1)
-applyEffect(game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].FinalImpact, game.Players.LocalPlayer.Character["Right Arm"], 1)
-applyEffect(game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].FinalImpact, game.Players.LocalPlayer.Character["Right Arm"], 1)
-applyEffect(game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].FinalImpact, game.Players.LocalPlayer.Character["Torso"], 1)
-applyEffect(game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].FinalImpact, game.Players.LocalPlayer.Character["Torso"], 1)
-
--- Function to stop and clean up the effects
-local function stopEffects()
-    for _, fx in ipairs(effects) do
-        if fx then
-            fx:Destroy()  -- Remove each effect
+local final2 = game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].FinalImpact.Origin:Clone()
+final2.Parent = game.Players.LocalPlayer.Character["Right Arm"]
+    for _, child in ipairs(final2:GetChildren()) do
+        if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
+            child:Emit(1) -- Emit 20 particles
         end
     end
-end
-
--- Set a timer to stop the effects after 5 seconds
-wait(1)
-stopEffects()
+local final3 = game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].FinalImpact.Attachment:Clone()
+final3.Parent = game.Players.LocalPlayer.Character["Right Arm"]
+    for _, child in ipairs(final3:GetChildren()) do
+        if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
+            child:Emit(1) -- Emit 20 particles
+        end
+    end
+local final4 = game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].FinalImpact.Attachment:Clone()
+final4.Parent = game.Players.LocalPlayer.Character["Torso"]
+    for _, child in ipairs(final4:GetChildren()) do
+        if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
+            child:Emit(1) -- Emit 20 particles
+        end
+    end
+local final5 = game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].FinalImpact.Attachment:Clone()
+final5.Parent = game.Players.LocalPlayer.Character["Torso"]
+    for _, child in ipairs(final5:GetChildren()) do
+        if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
+            child:Emit("1") -- Emit 20 particles
+        end
+    end
+local final6 = game.ReplicatedStorage.Resources.KJEffects["KJWallCombo"].FinalImpact.Attachment:Clone()
+final6.Parent = game.Players.LocalPlayer.Character["Torso"]
+    for _, child in ipairs(final6:GetChildren()) do
+        if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
+            child:Emit("1") -- Emit 20 particles
+        end
+    end
 
     end
  
